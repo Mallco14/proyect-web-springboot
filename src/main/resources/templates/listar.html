@@ -6,6 +6,12 @@
 </head>
 <body>
     <div align="center">
+
+        <p th:inline="text">Bienvenido<span sec:authentication="name"></span></p>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Salir">
+        </form>
+
         <h1>Listado de Personas</h1>
         <table border="1" cellpadding="10">
             <tr>
